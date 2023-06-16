@@ -1,0 +1,11 @@
+---
+metadata:
+  name: Check that resources are tagged with vino tags
+  category: GENERAL_SECURITY
+  id: CUSTOM_AWS_6
+definition:
+  and:
+    - resource_types: aws_s3_bucket
+      operator: exists
+      cond_type: attribute
+      attribute: tags.vinod
